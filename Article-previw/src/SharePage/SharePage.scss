@@ -1,0 +1,38 @@
+@use "../MainPage/MainPage";
+
+
+.modal-overlay{
+    @include MainPage.flexbox(row);
+    position: absolute;
+    height: 55px;
+    width: 248px;
+    background-color: MainPage.$granite;
+    border-radius: 10px;
+    z-index: 10;
+    top: 129px;
+    left: 550px;
+    
+
+    .modal-contetn{
+        @include MainPage.flexbox(row);
+        color: MainPage.$lightgrey;
+        letter-spacing: 5px;
+        font-size: 13px;
+        line-height: 20px;
+        gap: 16px;
+        .share-text{
+            margin-right: 5px;
+        }
+    }
+}
+
+.triangle{
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    background-color: MainPage.$granite;
+    z-index: 9;
+    top: 175px;
+    left: 665px;
+    transform: rotate(45deg);
+}
