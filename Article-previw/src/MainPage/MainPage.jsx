@@ -57,9 +57,9 @@ function MainPage(){
                             </button>
                             <SharePage show={isShareOpen} >
                                 <span className="share-text">SHARE</span>
-                                <img alt="facebook" src={Facebook} />
-                                <img alt="facebook" src={Twitter} />
-                                <img alt="facebook" src={Pinterest} />
+                                <img className="social-media-link" alt="facebook" src={Facebook} />
+                                <img className="social-media-link" alt="facebook" src={Twitter} />
+                                <img className="social-media-link" alt="facebook" src={Pinterest} />
                             </SharePage>
                         </div>
                     </section>
