@@ -31,117 +31,158 @@ main{
     background-color: $lightblue;
     box-sizing: border-box;
     font-family: "Manrope", serif;
-}
 
-.main-container{
-    background-color: white;
-    display: flex;
-    height: 280px;
-    width: 730px;
-    border-radius: 10px;
-    font-family: $font-stack;
-    position: relative;
 
-    .article-image{
+    .main-container{
+        background-color: white;
+        display: flex;
         height: 280px;
-        width: 285px;
-        border-radius: 10px 0 0 10px;
-    }
+        width: 730px;
+        border-radius: 10px;
+        font-family: $font-stack;
+        position: relative;
 
-    .content-section{
-        padding: 32px 40px 32px 40px;
-
-        .article-title{
-            font-size: 20px;
-            letter-spacing: 0.25px;
-            line-height: 28px;
-            margin-bottom: 12px;
-            color: $granite;
-            font-weight: bold;
+        .article-image{
+            height: 280px;
+            width: 285px;
+            border-radius: 10px 0 0 10px;
         }
 
-        .main-text{
-            @include main-text-settings(normal);
-            margin-bottom: 20px;
-            color: $asphalt;
-        }
+        .content-section{
+            padding: 32px 40px 32px 40px;
 
-        .author-info-container{
-            display: flex;
-            align-items: center;
-
-            .author-avatar{
-                height: 40px;
-                width: 40px;
-                border-radius: 50%;
-                margin-right: 16px;
+            .article-title{
+                font-size: 20px;
+                letter-spacing: 0.25px;
+                line-height: 28px;
+                margin-bottom: 12px;
+                color: $granite;
+                font-weight: bold;
             }
 
-            .author-date-container{
-                margin-right: 161px;
-
-                .author-name{
-                    @include main-text-settings(bold);
-                    color: $granite;
-                }
-    
-                .date{
-                    @include main-text-settings(normal);
-                    color: $lightgrey;
-                }
+            .main-text{
+                @include main-text-settings(normal);
+                margin-bottom: 20px;
+                color: $asphalt;
             }
 
-            .share-button{
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                border: none;
-                background-color: $lightblue;
+            .author-info-container{
+                display: flex;
+                align-items: center;
 
-                &:hover{
+                .author-avatar{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    margin-right: 16px;
+                }
+
+                .author-date-container{
+                    margin-right: 161px;
+
+                    .author-name{
+                        @include main-text-settings(bold);
+                        color: $granite;
+                    }
+        
+                    .date{
+                        @include main-text-settings(normal);
+                        color: $lightgrey;
+                    }
+                }
+
+                .share-button{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    border: none;
+                    background-color: $lightblue;
+
+                    &:hover{
+                        background-color: $asphalt;
+                        cursor: pointer; 
+                        
+                        .my-share-svg{
+                            fill: white;
+                        }
+                    }
+                }
+
+                .share-button-light{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    border: none;
+                    
+                    &:hover{
+                        background-color: $asphalt;
+                        cursor: pointer; 
+                        
+                        .my-share-svg{
+                            fill: white;
+                        }
+                    }
+                }
+
+                .share-button-dark{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    border: none;
                     background-color: $asphalt;
-                    cursor: pointer; 
                     
                     .my-share-svg{
                         fill: white;
                     }
-                }
-            }
 
-            .share-button-light{
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                border: none;
-
-                &:hover{
-                    background-color: $asphalt;
-                    cursor: pointer; 
-                    
-                    .my-share-svg{
-                        fill: white;
+                    &:hover{
+                        cursor: pointer; 
                     }
                 }
-            }
-
-            .share-button-dark{
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                border: none;
-                background-color: $asphalt;
                 
-                .my-share-svg{
-                    fill: white;
-                }
-
-                &:hover{
-                    cursor: pointer; 
-                }
             }
             
         }
-        
+    }
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        .main-container{
+            display: flex;
+            flex-direction: column;
+            height: 512px;
+            width: 327px;
+
+            .article-image{
+                height: 200px;
+                width: 327px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .content-section{
+                box-sizing: border-box;
+                padding: 36px 32px 20px 32px;
+                .article-title{
+                    font-size: 16px;
+                    letter-spacing: 0.2px;
+                    line-height: 24px;
+                    margin-bottom: 15px;
+                }
+
+                .main-text{
+                    margin-bottom: 36px;
+                }
+
+                .author-info-container{
+                    .author-date-container{
+                        margin-right: 55px;
+                        width: 116px;
+                    }
+                }
+
+            }
+        }
     }
 }
 

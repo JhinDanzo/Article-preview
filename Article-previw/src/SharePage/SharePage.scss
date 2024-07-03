@@ -1,4 +1,5 @@
 @use "../MainPage/MainPage";
+@use "sass:math";
 
 
 .modal-overlay{
@@ -35,4 +36,18 @@
     top: 175px;
     left: 665px;
     transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 600px){
+    .modal-overlay{
+        height: 74px;
+        width: 327px;
+        top: (512px - 74px);
+        left: 0;
+    }
+
+    .modal-contetn{
+        margin-left: 32px;
+    }
+    
 }
