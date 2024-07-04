@@ -15,4 +15,4 @@ jobs:
     - id: build-publish
       uses: bitovi/github-actions-react-to-github-pages@v1.2.4
       with:
-        folder: Article-preview # change to your build folder
+        path: Article-preview/src/App.jsx # change to your build folder
